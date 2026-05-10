@@ -1,9 +1,6 @@
 // Esta es la rama de molly
 
-fun main() {
-    ejerciciosVariables()
-}
-fun ejerciciosVariables() {
+ /* fun ejerciciosVariables() {
     // Ejercicios 1
     var habitantes = 100002
     val nombre = "Pedro"
@@ -132,5 +129,63 @@ fun ejerciciosVariables() {
     println(noNul)
 
 }
+*/
+    //Funciones
+
+fun buscarElemento(lista: List<String>, elemtento: String): Boolean {
+    var encontrado = false
+    for (i in lista){
+        if (i == elemtento){
+            encontrado = true
+            break
+        }
+
+    }
+    return encontrado
+}
+
+fun eliminarVocales(frase: String): String {
+    var acumulador = ""
+    for (i in frase) {
+        if (i.lowercaseChar() in "aeiou") {
+            continue
+        }
+        acumulador += i
+    }
+    return acumulador
+}
+/*fun sumaPares(): Int{
+    var listaNumeros = listOf<Int>(32,24,19,61,84)
+    var numeroFinal = 0
+    for (i in listaNumeros){
+        if (i % 2 == 0){
+            numeroFinal += i
+            continue
+        }
+
+    }
+    return numeroFinal
+}
+*/
+fun sumarPares(piñata: List<Int>): Int {
+    var total = 0
+    for (i in piñata){
+        if (i % 2 == 0){
+            total += i
+            continue
+        }
+    }
+    return total
+}
+ fun main() {
+     //ejerciciosVariables()
+     //val lista = listOf<String>("A", "B", "C", "D", "E", "F")
+    //println(buscarElemento(lista,"W"))
+    // val frase = "Los perros hacen guau guau"
+     // println(eliminarVocales(frase))
+    val listaNumeros = listOf<Int>(1,25,20,32,57)
+     val salariosEmpresa = listOf<Int>(20000,450,673,893)
+     println(sumarPares(salariosEmpresa))
+ }
 
 //data class cifras(var valor1: Int, var valor2: Int, var valor3: Int,var valor4: Int)
