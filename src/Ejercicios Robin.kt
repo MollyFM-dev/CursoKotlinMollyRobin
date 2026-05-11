@@ -5,7 +5,14 @@ fun main () {
     // imprimir_numeros_impares()
     // filtrar_nombres()
     // imprimir_secuencia()
-    sumar_pares()
+    // sumar_pares()
+
+    // 11/05 - 04:47
+    // encontrar_mayor()
+    calcular_primos()
+    // println(calcular_factorial(5))
+    // println(calcular_factorial())
+
     println("Todos putos, me dan el curso a medias")
 }
 
@@ -87,15 +94,64 @@ fun imprimir_secuencia() {   // Eeeeez
     }
 }
 
-fun sumar_pares() {   // Mi cabeza no da pa más hoy
+fun sumar_pares() {
     val listaNumeros = arrayOf(32 , 15 , 17 , 28)
-    var inicialLista = 0
+    var numeroFinal = 0
     for (n in listaNumeros) {
         if (n %2 == 0){
-
+            numeroFinal += n
+            continue
         } else {
-            inicialLista++
             continue
         }
     }
+    println(numeroFinal)
+}
+
+// 11/05 - 04:47
+fun encontrar_mayor () {    // Este sí, venga
+    val lista = listOf(23 , 45 , 103 , 12)
+    var mayor = 0
+    for (n in lista) {
+        if (n <= 100) {
+            continue
+        } else {
+            mayor = n
+            break
+        }
+    }
+    println(mayor)
+}
+
+fun calcular_primos(): List<Int> {             // Me caguen sus muertos, ni con el ChatGPT lo saco
+    var losPrimos = mutableListOf<Int>()
+    var primoInicial = 2
+    for (n in 2..primoInicial){
+        if (primoInicial %n == 0){
+            continue
+        } else {
+            losPrimos.add(primoInicial)
+            continue
+        }
+        if (losPrimos.size == 50) {
+            break
+        }
+        primoInicial++
+    }
+    return losPrimos
+    println(losPrimos)
+}
+
+fun calcular_factorial (numero: Int): Int {    // He mejorao pero sigo siendo tonto, lo hice con aiuda D;
+    var factorial = 1
+    for (n in 0..numero){
+        if (n == 0){
+            continue
+        }
+        factorial *= n
+        if (n == numero){
+            break
+        }
+    }
+    return factorial
 }
