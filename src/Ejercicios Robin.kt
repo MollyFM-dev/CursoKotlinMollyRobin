@@ -42,6 +42,29 @@ fun main () {
 
     // calcularFactorial(5)
 
+    // 13/05
+    //// VALORES POR DEFECTO ////
+    // saludar()
+
+    // calcular_area_rectangulo(7 , 3)
+
+    /* val persona1 = crear_persona("Moshi" , 4)
+    val persona2 = crear_persona("Max" , 13 , "Suavesito" , "Tar colgao")
+    println(persona1)
+    println(persona2) */
+
+    // imprimir_tabla_multiplicar (7)
+
+    // comprar_producto("Patatas" , 2 , 2.35)
+
+    // imprimir_frase("Castigao sin sexo" , 5)
+
+    // calcular_edad(1932)
+
+    // val lista = listOf (23 , 47 , 55)
+    // println(sumar_elementos(lista))
+
+
     println("Todos putos, me dan el curso a medias")
 }
 
@@ -278,4 +301,59 @@ fun calcularFactorial (numero: Int): Int {   // Este sin ayuda y sin mirar apunt
     }
     println(resultado)
     return resultado
+}
+
+fun saludar (nombre: String = "Abby", saludo: String? = "Meow meow") {    // Fasilito
+    // El ? de String? indica que ese valor es opcional en la función y que sin ella se debería ejecutar sin problemas
+    println("Hola $nombre!" /* $saludo"*/)
+}
+
+fun calcular_area_rectangulo (base: Int , altura: Int , unidades: String? = "Metros cuadrados") {    // Fasilitox2
+    var areaRectangulo = base * altura
+    println("El área del rectángulo es: $areaRectangulo $unidades")
+}
+
+fun crear_persona (    // No sé qué pollas falla si le copié al Chatgepeto... Eran los putos "!!", no te puedo creer
+    nombre: String,
+    edad: Int,
+    sexo: String? = "Fluffy",
+    ocupacion: String? = "Mimitos"
+): Map<String, Any> {
+    var gente = mapOf(
+        "nombre" to nombre!!,
+        "edad" to edad!!,
+        "sexo" to sexo!!,
+        "ocupacion" to ocupacion!!)
+    return gente
+}
+
+fun imprimir_tabla_multiplicar (numero: Int , limite: Int? = 10) {    // Funciona, que es lo importante
+    for (i in 1..limite!!){  // Según Kotlin: ponerle "!!" hace que no sea posible un valor nulo (?), no entiendo
+        println(numero*i)
+    }
+}
+
+fun comprar_producto (producto: String , cantidad: Int? = 1, precioUnitario: Double? = 0.0): Double {
+    val total = cantidad!! * precioUnitario!!   // A poner !! hasta en la contraseña del PC...
+    println("Precio final de $producto = $total")
+    return total
+}
+
+fun imprimir_frase (frase: String , repeticiones: Int? = 1 , puntuacion: String? = ".") {
+    repeat(repeticiones!!){   // Los !! son el ; de Kotlin xD
+        println("$frase$puntuacion")
+    }
+}
+
+fun calcular_edad (anioNacimiento: Int , anioActual: Int? = 2022) {
+    var edad = anioActual!! - anioNacimiento
+    println("Tiene $edad años")
+}
+
+fun sumar_elementos (lista: List<Int> , inicio: Int? = 0): Int {
+    var total = 0    // No sé qué le pasa a inicio en la función la verda.... Según el chagepeto no pinta nada
+    for (i in lista){
+        total += i
+    }
+    return total
 }
