@@ -51,7 +51,7 @@ fun main () {
     /* val persona1 = crear_persona("Moshi" , 4)
     val persona2 = crear_persona("Max" , 13 , "Suavesito" , "Tar colgao")
     println(persona1)
-    println(persona2) */
+    println(persona2)*/
 
     // imprimir_tabla_multiplicar (7)
 
@@ -64,6 +64,24 @@ fun main () {
     // val lista = listOf (23 , 47 , 55)
     // println(sumar_elementos(lista))
 
+    // 14/05
+
+    // construir_casa("madera")
+
+    // var elInteres = (calcular_interes(12000 , 0.07 , 1))
+    // println(elInteres)
+
+    //// LAMBDA ////
+    /* val lista = filtrar_positivos(listOf (20 , -11 , -56 , 43))
+    val positivos = filtrar_positivos(lista)
+    println(positivos) */
+
+    /* val lista = listOf(2 , 3 , 4)
+    var resultado = doble (lista)
+    println(resultado) */
+
+    // var resultado = invertir_cadena("Qué puta mierda es esta") ----- QUÉ COJONES ES ESTA MIERDA -----
+    // println(resultado)
 
     println("Todos putos, me dan el curso a medias")
 }
@@ -320,8 +338,8 @@ fun crear_persona (    // No sé qué pollas falla si le copié al Chatgepeto...
     ocupacion: String? = "Mimitos"
 ): Map<String, Any> {
     var gente = mapOf(
-        "nombre" to nombre!!,
-        "edad" to edad!!,
+        "nombre" to nombre,
+        "edad" to edad,
         "sexo" to sexo!!,
         "ocupacion" to ocupacion!!)
     return gente
@@ -356,4 +374,27 @@ fun sumar_elementos (lista: List<Int> , inicio: Int? = 0): Int {
         total += i
     }
     return total
+}
+
+fun construir_casa (material: String , habitaciones: Int? = 2 , patio: Boolean? = true) {
+    println("La casa está construida en $material, dispone de $habitaciones habitaciones y un patio $patio")
+}
+
+fun calcular_interes (capital: Int , tasa: Double? = 0.05 , tiempo: Int? = 1): Double {
+    var interes = capital * tasa!! * tiempo!!
+    return interes
+}
+
+fun filtrar_positivos (lista: List<Int>): List<Int> {    // El documento donde te explica las cosas es muy klk
+    return lista.filter { it > 0}
+}
+
+fun doble (numeros: List<Int>): List<Int> {    // Por la cara la verda, el chagepeto me cae mal
+    return numeros.map { it * 2 }
+}
+
+fun invertir_cadena (texto: String): String {  // Pero qué coño dices
+    return texto.reversed()
+        .map { it }
+        .joinToString ("")  // Se me desencajó la mandíbula. Dimito...
 }
