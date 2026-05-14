@@ -177,15 +177,26 @@ fun sumarPares(piñata: List<Int>): Int {
     }
     return total
 }
+
+fun construirCasa(material: String, habitaciones: Int? = 2, patio: Boolean = true): String{
+    var texto = "La casa es de $material, tiene $habitaciones habitaciones y su patio es  $patio"
+    return texto
+}
+
+
  fun main() {
-     //ejerciciosVariables()
-     //val lista = listOf<String>("A", "B", "C", "D", "E", "F")
-    //println(buscarElemento(lista,"W"))
-    // val frase = "Los perros hacen guau guau"
-     // println(eliminarVocales(frase))
-    val listaNumeros = listOf<Int>(1,25,20,32,57)
+     /*
+     ejerciciosVariables()
+     val lista = listOf<String>("A", "B", "C", "D", "E", "F")
+     println(buscarElemento(lista,"W"))
+     val frase = "Los perros hacen guau guau"
+     println(eliminarVocales(frase))
+     val listaNumeros = listOf<Int>(1,25,20,32,57)
      val salariosEmpresa = listOf<Int>(20000,450,673,893)
      println(sumarPares(salariosEmpresa))
+     println(construirCasa("Manteca",3,true))
+
+      */
  }
 
 //data class cifras(var valor1: Int, var valor2: Int, var valor3: Int,var valor4: Int)
