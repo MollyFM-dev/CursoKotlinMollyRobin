@@ -75,13 +75,59 @@ fun main () {
     /* val lista = filtrar_positivos(listOf (20 , -11 , -56 , 43))
     val positivos = filtrar_positivos(lista)
     println(positivos) */
+    /* ---- ESTE ES EL BUENO ----
+    val filtrarPositivos = {lista: List<Int> -> lista.filter { it > 0 }}
+    val Lista = listOf(-1,2,-3,-4,5)
+    println(filtrarPositivos(Lista))*/
 
     /* val lista = listOf(2 , 3 , 4)
     var resultado = doble (lista)
     println(resultado) */
+    /* ---- ESTE ES EL BUENO ----
+    val doble = { numeros: List<Int> -> numeros.map { it * 2 } }
+    val numeros = listOf(1,2,5,20)
+    println(doble(numeros)) */
 
     // var resultado = invertir_cadena("Qué puta mierda es esta") ----- QUÉ COJONES ES ESTA MIERDA -----
     // println(resultado)
+    /* ---- ESTE ES EL BUENO ----
+    val invertirCadena = { texto: String -> texto.reversed() }
+    val texto = "Esto es algo más entendible"
+    println(invertirCadena(texto))*/
+
+    /* val filtrarImpares = { numeros: List<Int> -> numeros.filter { it %2 != 0 } } // WOOOO qué guapo
+    val numeros = listOf(23 , 12 , 34 , 67)
+    println(filtrarImpares(numeros))*/
+
+    /* val mayorACien = { numeros: List<Int> -> numeros.filter { it > 100 } }
+    val numeros = listOf(23, 245, 88, 100, 789)
+    println(mayorACien(numeros))*/
+
+    /* val numeros = listOf(15, 23, 63, 98)
+    val sumarElementos = numeros.reduce { acc, n -> acc + n } // acc = acumulador, n = elemento de la lista
+    println(sumarElementos)*/
+
+    /*   Su puta madre...
+    val contarVocales = { texto: String -> texto.filter { letra -> letra.lowercaseChar() in "aeiou" }.count () }
+    val texto = "A ver como hago yo esto"
+    println(contarVocales(texto))*/
+
+    /* Tooooma, lo hice sin tener ni puta idea al principio
+    var eliminarDuplicados = { lista: Set<String> -> setOf(lista) }
+    var lista = setOf<String>("Meow", "Muuu", "Meow", "Guau", "Aiuda", "Muuu")
+    println(eliminarDuplicados(lista))*/
+
+    /* Fasilito
+    val encontrarMenor = { lista: List<Int> -> lista.min () }
+    val lista = listOf(23, 245, 88, 100, 789)
+    println(encontrarMenor(lista))*/
+
+    val calcularPromedio = { numeros: List<Int> -> numeros.sum() / numeros.size }
+    val numeros = listOf(23, 245, 88, 100, 789)
+    println(calcularPromedio(numeros))
+    // val suma = numeros.sum()
+
+
 
     println("Todos putos, me dan el curso a medias")
 }

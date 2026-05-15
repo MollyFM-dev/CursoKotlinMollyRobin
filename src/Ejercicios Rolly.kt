@@ -184,6 +184,7 @@ fun construirCasa(material: String, habitaciones: Int? = 2, patio: Boolean = tru
 }
 
 
+
  fun main() {
      /*
      ejerciciosVariables()
@@ -197,6 +198,9 @@ fun construirCasa(material: String, habitaciones: Int? = 2, patio: Boolean = tru
      println(construirCasa("Manteca",3,true))
 
       */
+     val filtrarPositivos = {lista: List<Int> -> lista.filter { it > 0 }}
+     val Lista = listOf(-1,2,-3,-4,5)
+     println(filtrarPositivos(Lista))
  }
 
 //data class cifras(var valor1: Int, var valor2: Int, var valor3: Int,var valor4: Int)
