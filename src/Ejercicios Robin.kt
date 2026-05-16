@@ -122,15 +122,100 @@ fun main () {
     val lista = listOf(23, 245, 88, 100, 789)
     println(encontrarMenor(lista))*/
 
-    val calcularPromedio = { numeros: List<Int> -> numeros.sum() / numeros.size }
+    /* val calcularPromedio = { numeros: List<Int> -> numeros.sum() / numeros.size }
     val numeros = listOf(23, 245, 88, 100, 789)
-    println(calcularPromedio(numeros))
-    // val suma = numeros.sum()
+    println(calcularPromedio(numeros))*/
 
+    //// ESTRUCTURAS CONDICIONALES - SENTENCIA IF //// <- Ahora los pones hijo de puta?
+    /*
+    //// Si el número es par ////
+    val numero = 5
+    if ( numero% 2 == 0 ) {
+        println("$numero es par")
+    } else {
+        println("$numero no es par")
+    }*/
 
+    /*
+    //// Si el caracter es una vocal ////
+    var caracter = "m"
+    if ( caracter == "a" || caracter == "e" || caracter == "i" || caracter == "o" || caracter == "u") {
+        println("$caracter es una vocal")
+    } else {
+        println("$caracter no es una vocal")
+    }*/
 
+    /*
+    //// Si el número es negativo ////
+    val numero = -4
+    if (numero > 0){
+        println("$numero no es negatico")
+    } else {
+        println("$numero es negativo")
+    }*/
+
+    /*
+    //// Si el número es múltiplo de 3 ////
+    val numero = 178
+    if ( numero % 3 == 0 ) {
+        println("$numero es múltiplo de 3")
+    } else {
+        println("$numero no es múltipo de 3")
+    }*/
+
+    /*
+    //// Si el número está entre 10 y 20 ////
+    val numero = 14
+    if (numero in 10..20) {
+        println("$numero está en el range de 10 a 20")
+    } else {
+        println("$numero no está en el rango de 10 a 20")
+    }*/
+
+    /*
+    //// Si el número es de un solo dígito ////
+    val numero = 3
+    if ( numero / 10 >= 1 ){
+        println("$numero no es un número de un solo dígito")
+    } else {
+        println("$numero es un número de un solo dígito")
+    }*/
+
+    //// Si el número tiene 3 dígitos ////
+    /*val numero = 254
+    if ( numero / 100 >= 1 && numero / 100 < 100){
+        println("$numero es un número de 3 dígitos")
+    } else {
+        println("$numero no es un número de 3 dígitos")
+    }*/
+
+    //// Si es divisible entre 5 ////
+    /* val numero = 170
+    if ( numero % 5 == 0 ) {
+        println("$numero es divisible entre 5")
+    } else {
+        println("$numero no es divisible entre 5")
+    }*/
+
+    //// Si es capicúa //// ---- Vaaaale tiene sentido
+    val numero = 22423
+    val invertido = numero.toString().reversed()
+    if (numero.toString() == invertido) {
+        println("$numero es capicúa")
+    } else {
+        println("$numero no es capicúa")
+    }
     println("Todos putos, me dan el curso a medias")
 }
+//// ESTRUCTURAS CONDICIONALES - SENTENCIA WHEN //// --- La explicación es una basura
+    val numero1 = 23
+    val numero2 = 45
+    val result = when {
+        numero1 > numero2 -> println("$numero1 es el número mayor")
+        numero1 < numero2 -> println("$numero2 es el número mayor")
+        else -> {}
+    }
+
 
 fun suma_numeros_positivos() {
     val arrayNumeros = arrayOf(20 , -14 , 45 , 65 , -87)
