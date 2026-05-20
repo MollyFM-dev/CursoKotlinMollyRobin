@@ -198,24 +198,116 @@ fun main () {
     }*/
 
     //// Si es capicúa //// ---- Vaaaale tiene sentido
-    val numero = 22423
+    /*val numero = 22423
     val invertido = numero.toString().reversed()
     if (numero.toString() == invertido) {
         println("$numero es capicúa")
     } else {
         println("$numero no es capicúa")
-    }
+    }*/
     println("Todos putos, me dan el curso a medias")
-}
+
 //// ESTRUCTURAS CONDICIONALES - SENTENCIA WHEN //// --- La explicación es una basura
-    val numero1 = 23
+    /* val numero1 = 23
     val numero2 = 45
     val result = when {
         numero1 > numero2 -> println("$numero1 es el número mayor")
         numero1 < numero2 -> println("$numero2 es el número mayor")
         else -> {}
+    }*/
+
+    /*
+    // Llevo varios días sin programar, mi cerebro se está reiniciando pero lo conseguí
+    val numero = 98
+    val determinarCuartil = when {
+        numero in 0..25 -> println("El número está en el primer cuartil")
+        numero in 26..50 -> println("El número está en el segundo cuartil")
+        numero in 51..75 -> println("El número está en el tercer cuartil")
+        else -> println("El número está fuera de los cuartiles")
+    }*/
+
+    /* val numero = -435  // FASILITO
+    val signo = when {
+        numero > 0 -> println("El número es positivo")
+        numero < 0 -> println("El número es negativo")
+        else -> println("El número es 0")
+    }*/
+
+    val calificacion = 2
+    val nota = when {
+        calificacion in 9..10 -> println("A")
+        calificacion in 7..8 -> println("B")
+        calificacion in 5..6 -> println("C")
+        calificacion in 3..4 -> println("D")
+        calificacion in 0..2 -> println("F")
+        else -> {}
     }
 
+    val caracter = "u"
+    val esVocal = when {
+        caracter.lowercase() in "aeiou" -> println("$caracter es una vocal")
+        else -> println("$caracter no es una vocal")
+    }
+
+    val fecha = 1996
+    val esBisiesto = when {
+        fecha %4 == 0 -> println("$fecha es un año bisiesto")
+        else -> println("$fecha NO es un año bisiesto")
+    }
+
+    /* val numero = 23
+    val esPar = when {
+        numero %2 == 0 -> println("El $numero es par")
+        else -> println("El $numero es impar")
+    }*/
+
+    val numero1 = 5456
+    val numero2= 23
+    val divisible = when {
+        numero1 %numero2 == 0 -> println("El $numero1 es divisible entre $numero2")
+        else -> println("El $numero1 NO es divisible entre $numero2")
+    }
+
+    val dia = 3
+    val diaSemana = when {
+        dia == 1 -> println("Lunes")
+        dia == 2 -> println("Martes")
+        dia == 3 -> println("Miércoles")
+        dia == 4 -> println("Jueves")
+        dia == 5 -> println("Viernes")
+        dia == 6 -> println("Sábado")
+        dia == 7 -> println("Domingo")
+        else -> {}
+    }
+
+    /* val palabra = "Meow" // NI PUTA IDEA DE CÓMO HACERLO
+    val esNumero = when {
+        palabra.toInt() = null -> println("$palabra No es un número")
+        else -> println("$palabra es un número")
+    } */
+
+//// BUCLES - BUCLE FOR ////
+    for (i in 2..20 step 2) {
+        println(i)
+    }
+
+    var sumaNumeros = 0
+    for (n in 1..100) {
+        sumaNumeros += n
+    }
+    println(sumaNumeros)
+
+    for (k in 10 downTo 1) {
+        println(k)
+    }
+
+    val numero = 5
+    for (o in 1..10){
+        println("$numero x $o = ${numero*o}") // Uff me ha costado hacer esto
+    }
+
+
+}
 
 fun suma_numeros_positivos() {
     val arrayNumeros = arrayOf(20 , -14 , 45 , 65 , -87)
