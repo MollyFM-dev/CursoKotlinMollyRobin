@@ -306,6 +306,34 @@ fun main () {
         println("$numero x $o = ${numero*o}") // Uff me ha costado hacer esto
     }
 
+    // Imprimir la secuencia de fibonacci hasta un número dado
+    var a = 0
+    var b = 1
+    val numeroDado = 10
+    for (u in 0..numeroDado) {
+        println(a)
+        var siguiente = a + b
+        a = b
+        b = siguiente
+    }
+
+    // Imprimir números primos hasta que le diga -- MIRA, ME CAGO EN SU PUTA MADRE
+    var primoInicial = 2
+    val numeroPrimos = 10
+    var contador = 0
+    println(primoInicial)
+    primoInicial++
+    while (contador < numeroPrimos) {
+        for (p in 2 until primoInicial) {
+            if (primoInicial %p == 0) {
+                primoInicial++
+            } else {
+                println(primoInicial)
+                primoInicial++
+                contador++
+            }
+        }
+    }
 
 }
 
