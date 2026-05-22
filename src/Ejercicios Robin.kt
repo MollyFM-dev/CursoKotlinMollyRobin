@@ -1,4 +1,5 @@
 import kotlin.math.pow
+import kotlin.random.Random
 
 fun main () {
     // suma_numeros_positivos()
@@ -280,14 +281,14 @@ fun main () {
         else -> {}
     }
 
-    /* val palabra = "Meow" // NI PUTA IDEA DE CÓMO HACERLO
+    val palabra = "Muuu3" // Es que tenía que meter el número en el String jeje
     val esNumero = when {
-        palabra.toInt() = null -> println("$palabra No es un número")
-        else -> println("$palabra es un número")
-    } */
+        palabra.lowercase() in "0123456789"-> println("$palabra Es un número")
+        else -> println("$palabra no es un número")
+    }
 
 //// BUCLES - BUCLE FOR ////
-    for (i in 2..20 step 2) {
+    /* for (i in 2..20 step 2) {
         println(i)
     }
 
@@ -315,25 +316,169 @@ fun main () {
         var siguiente = a + b
         a = b
         b = siguiente
-    }
+    }*/
 
     // Imprimir números primos hasta que le diga -- MIRA, ME CAGO EN SU PUTA MADRE
-    var primoInicial = 2
+    /*var primoInicial = 2
     val numeroPrimos = 10
     var contador = 0
     println(primoInicial)
     primoInicial++
     while (contador < numeroPrimos) {
         for (p in 2 until primoInicial) {
-            if (primoInicial %p == 0) {
+             if (primoInicial %p == 0) {
                 primoInicial++
-            } else {
+
+            }
                 println(primoInicial)
                 primoInicial++
-                contador++
-            }
+
+        }
+        contador++
+    }*/
+
+    // Imprimir la suma de los cuadrados de los números del 1 al n (donde n es un número dado).
+    /* val numero = 4
+    var acumulador = 0
+    for (n in 1..numero){
+        acumulador += n*n
+    }
+    println(acumulador)*/
+
+    // Imprimir los números perfectos hasta el n-ésimo término (donde n es un número dado) - Este va a ser como los primos
+    // NI PUTA IDEA
+
+    // Imprimir la suma de los múltiplos de 3 y 5 hasta n (donde n es un número dado)
+    /*val numero = 5
+    var acumulador = 0
+    for (n in 1..numero) {
+        acumulador = 3*n + 5*n
+        println(acumulador)
+    }*/
+
+    // Imprimir la suma de los dígitos de un número dado. - SUS PUTOS MUERTOS
+    /* val numero = 451
+    var suma = 0
+    for (n in numero.toString()){
+        suma += n.toString().toInt()
+    }
+    println(suma)*/
+
+//// BUCLES - BUCLE FOR EACH ////
+    // Dado una lista de números enteros, escribe un código que determine si todos los elementos de la lista son pares.
+    // Voy pillando trucos...
+    /* val numeros = listOf(2, 6, 88, 42)
+    var impares = 0
+    numeros.forEach { number ->
+        if (number %2 != 0) {
+            impares++
         }
     }
+    if (impares == 0) {
+        println("Todos los números son pares")
+    } else {
+        println("NO todos los números son pares")
+    }*/
+
+    // Dado una lista de cadenas de texto, escribe un código que determine si alguna de las cadenas es un palíndromo
+    // (se lee igual de izquierda a derecha y de derecha a izquierda).
+    // Sí... ya lo voy pillando
+    /*val palabras = listOf("meow", "muuu", "cuack", "wow")
+    var acumulador = 0
+    palabras.forEach { gato ->
+        if (gato != gato.reversed()) {
+            acumulador++
+        }
+    }
+    if (acumulador < palabras.size){
+        println("Alguna de las cadenas es un palíndromo")
+    } else if (acumulador == 0){
+        println("Todas las cadenas son palíndromos")
+    } else {
+        println("Ninguna de las cadenas es un palíndromo")
+    }*/
+
+    // Dado una lista de números enteros, escribe un código que calcule la media aritmética de los elementos de la lista.
+    /* val numeros = listOf(23, 4, 78, 15)
+    var suma = 0
+    numeros.forEach { numero ->
+        suma += numero
+    }
+    val media = suma/2
+    println(media)*/
+
+    // Dado una lista de cadenas de texto, escribe un código que determine cuántas de las cadenas tienen más de 5 caracteres.
+    /* val lista = listOf("Meow", "Grrrrrr", "Woof", "Pspsps")
+    var acumulador = 0
+    lista.forEach { perro ->
+        if (perro.length > 5){
+            acumulador++
+        }
+    }
+    println("En la lista hay $acumulador cadenas que tienen más de 5 caracteres")*/
+
+    // Dado una lista de números enteros, escribe un código que determine si hay algún número que sea divisible tanto por 2 como por 3 al mismo tiempo.
+    /* val numeros = listOf(23,45, 12, 88)
+    var acumulador = 0
+    numeros.forEach { meow ->
+        if (meow %2 == 0 && meow %3 == 0) {
+            acumulador++
+        }
+    }
+    if (acumulador < numeros.size){
+        println("Alguno de los números es divisible entre 2 y 3")
+    } else if (acumulador == 0){
+        println("Ningún número es divisible entre 2 y 3 al mismo tiempo")
+    } else {
+        println("Todos los números son divisibles entre 2 y 3")
+    }*/
+
+    // Dado una matriz de enteros, escribe un código que determine cuántos elementos de la matriz son múltiplos de 3 y no de 5,
+    // y que además sean mayores a 10 y menores a 20.
+    /* val numeros = listOf(27, 55, 12, 45)
+    var acumulador = 0
+    numeros.forEach { number ->
+        if (number %3 == 0 && number %5 != 0 && number in 11 until 20){
+            acumulador++
+        }
+    }
+    println("Números divisibles entre 3, no divisibles entre 5 y comprendidos entre 10 y 20 se han encontrado: $acumulador")*/
+
+//// BUCLES - BUCLE WHILE //// -- Aquí el que escribió los enunciados se fumó un porro
+    // Bueno, ni tan mal, creo
+    /* println("Ingresa los números positivos que quieras")
+    println("Ingresa un número negativo y paro")
+    var suma = 0
+    while (true) {
+        println("Ingresa número:")
+        val numero = readln().toIntOrNull()
+
+        if (numero!! < 0){
+            break
+        }
+        suma+=numero
+    }
+    println("La suma total es: $suma")*/
+
+    // Desarrolla un programa que simule un juego donde los jugadores lanzan un dado hasta que obtienen un 6.
+    // El programa debe contar cuántos lanzamientos se necesitaron para obtener un 6. Utiliza un bucle "while" para esto.
+    // A TOMAR POR CLETA LA BICICULO - Seguro que pide algo mejor pero que le jodan, que no parezca que he faltado un mes a clase con sus putos ejercicios
+    /*var lanzamientos = 0
+    var dado = 0
+    println("El juego va de lanzar aros, el que saque un 6 gana")
+    while (true) {
+        dado = Random.nextInt(1,7)
+        println("Jugador lanza el dado:")
+        if (dado in 1..6) {
+            lanzamientos++
+            println("Salió $dado")
+        }
+        if (dado == 6){
+            println("Oleee! Tienes la satisfacción de ser ese 16%")
+            break
+        }
+    }
+    println("Obtuviste un 6 después de $lanzamientos lanzamientos")*/
 
 }
 
