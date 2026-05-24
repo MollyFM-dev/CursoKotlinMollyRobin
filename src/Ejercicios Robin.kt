@@ -446,7 +446,7 @@ fun main () {
 
 //// BUCLES - BUCLE WHILE //// -- Aquí el que escribió los enunciados se fumó un porro
     // Bueno, ni tan mal, creo
-    /* println("Ingresa los números positivos que quieras")
+    /*println("Ingresa los números positivos que quieras")
     println("Ingresa un número negativo y paro")
     var suma = 0
     while (true) {
@@ -479,6 +479,126 @@ fun main () {
         }
     }
     println("Obtuviste un 6 después de $lanzamientos lanzamientos")*/
+
+    // Crea un programa que solicite al usuario ingresar una cadena de caracteres y luego imprima la cadena,
+    // pero omita todas las vocales. Utiliza un bucle "while" y "continue" para ignorar las vocales.
+    // Un día sin programar se nota, caguen la puta
+    /* println("Escribe lo que sea:")
+    var frase = readln()
+    var n = 0
+    while (n < frase.length) {
+        val letra = frase[n]
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+            n++
+            continue
+        }
+        print(letra)
+        n++
+    }*/
+
+    // Diseña un programa que genere una secuencia de números del 1 al 20, pero solo imprime los números impares.
+    // Utiliza un bucle "while" y "continue" para omitir los pares.
+    // Sencillo, para toda la familia
+    /* var inicio = 1
+    while (inicio < 20){
+        if (inicio %2 == 0){
+            inicio++
+            continue
+        } else {
+            println(inicio)
+            inicio++
+        }
+    }*/
+
+    // Desarrolla un programa que recorra una lista de nombres y solo imprima aquellos que tengan más de 5 letras.
+    // Utiliza un bucle "while" y "continue" para evitar imprimir los nombres más cortos.
+    // Uff, me está costando caguenlaputa
+    /* var nombres = listOf("Meow", "Max", "Abbymoshi", "Mollymeow")
+    var posicion = 0
+    while (posicion < nombres.size){
+        var nombre = nombres [posicion]
+        if (nombre.length < 5){
+            posicion++
+            continue
+        }
+        println(nombre)
+        posicion++
+    }*/
+
+    // Escribe un programa que imprima los números del 1 al 10, pero omita el número 5.
+    // Utiliza un bucle "while" y "continue" para lograr esto.
+    // Me meten chorradas de ejercicios en medio, no lo entiendo
+    /* var numero = 0
+    while (numero <= 10){
+        if (numero == 5){
+            numero++
+            continue
+        }
+        println(numero)
+        numero++
+    }*/
+
+    // Crea un programa que solicite al usuario ingresar 5 números enteros y luego imprima la suma de todos los números pares.
+    // Utiliza un bucle "while" y "continue" para ignorar los impares.
+    // Bieeeeen, he sabido hacerlo sin preguntarle al profe
+    /*var contador = 0
+    var acumulador = 0
+    while (contador < 5){
+        println("Ingresa 1 número entero ($contador / 5):")
+        val numero = readln().toIntOrNull()
+        if (numero!! %2 == 0){
+            acumulador += numero
+            contador++
+            continue
+        } else {
+            contador++
+            continue
+        }
+    }
+    println("La suma total de los números pares introducidos es: $acumulador")*/
+
+    // Diseña un programa que recorra una lista de números y encuentre el primer número mayor que 100.
+    // Utiliza un bucle "while" y "break" para detener la iteración una vez que se encuentre dicho número.
+    // Vaaaa, cero fallos
+    /*val lista = listOf(23, 47, 109, 210)
+    var inicioWhile = 0
+    while (inicioWhile < lista.size){
+        var posicion = lista[inicioWhile]
+        if (posicion < 100){
+            inicioWhile++
+            continue
+        } else {
+            println(posicion)
+            break
+        }
+    }*/
+
+    // Desarrolla un programa que imprima los primeros 50 números primos. Utiliza un bucle "while" y "break"
+    // para salir del bucle una vez que se hayan encontrado los 50 números primos.
+    // QUÉ PUTO PESADO CON LOS PUTOS PRIMOS DE LOS COJONES
+
+
+
+    // Escribe un programa que solicite al usuario ingresar un número y luego calcule su factorial.
+    // Utiliza un bucle "while", "continue" para evitar multiplicar por 0, y "break" para salir del bucle una vez que se haya calculado el factorial.
+
+    /* var inicio = 0
+    var resultado = 1
+    println("Introduce un número entero positivo:")
+    while (true) {
+        val numero = readln().toIntOrNull()
+        inicio = numero!!    // No sé qué pollas falla
+        if (inicio > 1){
+            resultado *= inicio
+            inicio-1
+            continue
+        } else if (inicio == 1){
+            break
+        }
+        println("El número factorial de $numero es : $resultado")
+    }*/
+
+
 
 }
 
