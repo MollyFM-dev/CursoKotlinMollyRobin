@@ -576,28 +576,109 @@ fun main () {
     // Desarrolla un programa que imprima los primeros 50 números primos. Utiliza un bucle "while" y "break"
     // para salir del bucle una vez que se hayan encontrado los 50 números primos.
     // QUÉ PUTO PESADO CON LOS PUTOS PRIMOS DE LOS COJONES
+    // EL PRIMER PUTO EJERCICIO DE PRIMOS QUE ME FUNCIONA HOSTIA PUTA
+    /*var inicio = 2
+    var encontrados = 0
+    while (encontrados < 10){
+        var divisores = 0
+        for (n in 1..inicio){
+            if (inicio %n == 0){
+                divisores++
+                continue
+            } else if (inicio %n != 0){
+                continue
+            }
+        }
+        if (divisores == 2){
+            println(inicio)
+            encontrados++
+            inicio++
+        } else {
+            inicio++
+        }
+    }*/
 
 
 
     // Escribe un programa que solicite al usuario ingresar un número y luego calcule su factorial.
     // Utiliza un bucle "while", "continue" para evitar multiplicar por 0, y "break" para salir del bucle una vez que se haya calculado el factorial.
-
-    /* var inicio = 0
-    var resultado = 1
+    // Me ha costado cabrón
+    /*var inicio = 1
     println("Introduce un número entero positivo:")
-    while (true) {
-        val numero = readln().toIntOrNull()
-        inicio = numero!!    // No sé qué pollas falla
-        if (inicio > 1){
+    val numero = readln().toIntOrNull()
+    var resultado = numero
+    while (numero!! > 1) {
+        if (inicio < numero){
             resultado *= inicio
-            inicio-1
+            inicio++
             continue
-        } else if (inicio == 1){
+        } else if (inicio == numero) {
             break
         }
-        println("El número factorial de $numero es : $resultado")
-    }*/
+    }
+    println("El número factorial de $numero es: $resultado")*/
 
+//// BUCLES - BUCLE DO WHILE ////
+    // Diseña un programa que solicite al usuario ingresar números enteros positivos y los sume,
+    // pero si el usuario ingresa un número negativo, el programa debe detenerse y mostrar la suma hasta ese momento,
+    // utilizando "break" para salir del bucle cuando se ingrese un número negativo. Implementa esto usando un bucle "do-while".
+    /*var numero: Int
+    var suma = 0
+    do {
+        println("Ingrese un número positivo:")
+        numero = readln().toInt()
+        // if (numero < 0){ break } --- Funciona igual sin esto
+        suma += numero
+    } while (numero >= 0)
+    println("La suma de los números ingresados es $suma")*/
+
+    // Desarrolla un programa que simule un juego donde los jugadores lanzan un dado hasta que obtienen un 6,
+    // utilizando "continue" para omitir el lanzamiento si el resultado es diferente de 6. Implementa esto usando un bucle "do-while".
+    // Ejercicio de caca en verda
+    /*var dado:Int
+    do {
+        dado = Random.nextInt(1, 7)
+        println(dado)
+        if (dado != 6){
+            continue
+        } else {
+            break
+        }
+    } while (true)*/
+
+    // Escribe un programa que solicite al usuario ingresar una cadena de caracteres y luego imprima la cadena,
+    // pero omita todas las vocales, utilizando "continue" para ignorarlas. Implementa esto usando un bucle "do-while".
+    /*var cadena: String
+    var resultado = ""
+    var contador = 0
+    do{
+        println("Introduce una cadena de texto:")
+        cadena = readln().toString()
+        for (n in cadena){
+            if (n.lowercaseChar() in "aeiou"){
+            continue
+            }
+            resultado += n
+        }
+        println(resultado)
+        contador++
+    } while (contador < 1)*/
+
+    // Crea un programa que solicite al usuario ingresar un número y luego calcule su factorial,
+    // utilizando "continue" para evitar multiplicar por 0 y "break" para salir del bucle una vez que se haya calculado el factorial.
+    // Implementa esto usando un bucle "do-while".
+    /*var inicio = 1
+    var resultado = 1
+    println("Ingrese un número para obtener su factorial:")
+    val numero = readln().toInt()
+    resultado = numero
+    do {
+        if (inicio < numero) {
+            resultado *= inicio
+            inicio++
+        }
+    } while (inicio < numero)
+    println("El número factorial de $numero es $resultado")*/
 
 
 }
